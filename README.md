@@ -3,7 +3,7 @@
 ## Table of Contents: 
 * Overview of Project
 
-* Data Description 
+
 * Libraries used
 
 * Steps followed
@@ -34,64 +34,7 @@ We are given Helen Dataset which contains images of faces of different persons. 
 
 For this task we will be using the famous U-Net Architecture. <a href='https://arxiv.org/abs/1505.04597'>U-Net Paper</a>.
 
-## Data Description:   
-For this project , the Helen Dataset used can be downloaded from <a href='https://drive.google.com/file/d/1jweX1u0vltv-tYZhYp6mlyDZDy0aDyrw/view?usp=sharing'>Helen Dataset</a>.<br>
-For each image. It has 3 types of files. One is <tt>image.jpg</tt> which has the file which will be loaded to the model. Second is the <tt>label.png</tt> file which has all pixel by pixel classications of the image. The <tt>viz.jpg</tt> file is just for demonstation purpose and is not of any use to the model.<br>
-Following is the directory structure 
 
-
-<pre>.
-└── helenstar_release
-     ├── train
-     │   ├── image.jpg
-     │   ├── label.png
-     ├   ├── viz.jpg
-     │   └── ... (1999 sets of 3 images i.e 5997 images total)           
-     └── test
-         ├── image.jpg
-         ├── label.png
-         ├── viz.jpg
-         └── ... (100 sets of 3 images i.e 300 images total)</pre>
-
-Total number of images in dataset : 2099<br>
-Number of images in train set : 1999<br>
-Number of images in test set : 100
-
-
-For convenience I will be performing some shiftings to put all image.jpg files in one folders , label.png in other. I will be doing this using the <tt>shutil</tt> module of python
-
-The final directory strucutre will be as follows
-<pre>.
-└── splitted_Data
-        ├── train
-        │   ├── images
-        │   │   ├── image1.jpg
-        │   │   ├── image2.jpg
-        │   │   └── ... (1999 files)
-        │   └── labels
-        │       ├── label1.jpg
-        │       ├── label2.jpg
-        │       └── ... (1999 files)       
-        │           
-        └── test
-            ├── images
-            │   ├── image1.jpg
-            │   ├── image2.jpg
-            │   └── ... (100 files)
-            └── labels
-                ├── label1.jpg
-                ├── label2.jpg
-                └── ... (100 files)</pre>
-                
-Sample images and their corresponding labels <br>
-![](images/image1.png)
-![](images/label1.png)
-
-![](images/image2.png)
-![](images/label2.png)
-
-![](images/image3.png)
-![](images/label3.png)
 
 
 ## Libraries used:
